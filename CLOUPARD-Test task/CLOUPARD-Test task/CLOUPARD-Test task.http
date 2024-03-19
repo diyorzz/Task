@@ -1,0 +1,6 @@
+@CLOUPARD_Test_task_HostAddress = http://localhost:5277
+
+GET {{CLOUPARD_Test_task_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
