@@ -1,4 +1,6 @@
 
+using CLOUPARD_Test_task.Extensions;
+
 namespace CLOUPARD_Test_task
 {
     public class Program
@@ -13,6 +15,7 @@ namespace CLOUPARD_Test_task
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.ConfigureDatabaseContext();
 
             var app = builder.Build();
 
