@@ -18,7 +18,7 @@ namespace CLOUPARD_Test_task.Controllers
         [HttpGet]
         public async Task<ActionResult<Product>> GetAllAsync()
         {
-            var products = await _dbContext.Product.ToListAsync();
+            var products = await _dbContext.Product.OrderBy(p => p.Name).ToListAsync();
 
             return Ok(products);
         }
