@@ -1,3 +1,6 @@
+using CLOUPARD_Test_task_MVC.DataAccessLayer;
+using Microsoft.EntityFrameworkCore;
+
 namespace CLOUPARD_Test_task_MVC
 {
     public class Program
@@ -8,6 +11,9 @@ namespace CLOUPARD_Test_task_MVC
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<TestDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("TestMvcConnection")));
 
             var app = builder.Build();
 
