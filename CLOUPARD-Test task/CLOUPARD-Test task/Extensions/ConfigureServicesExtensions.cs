@@ -10,7 +10,7 @@ namespace CLOUPARD_Test_task.Extensions
             var builder = WebApplication.CreateBuilder();
 
             services.AddDbContext<TestDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("TestConection")));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("TestConnection")));
 
             return services;
         }
